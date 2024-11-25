@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 function Home() {
   return (
@@ -11,7 +11,7 @@ function Home() {
         height={100}
       />
     </>
-  )
+  );
 }
 
 export default Home;
