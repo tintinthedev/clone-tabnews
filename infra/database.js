@@ -9,14 +9,13 @@ async function query(queryObject) {
     port: process.env.POSTGRES_PORT,
   });
 
-  await client.connect();
-
   try {
+    await client.connect();
     const queryResult = await client.query(queryObject);
-
     return queryResult;
   } catch (error) {
     console.error(error);
+    throw error;
   } finally {
     await client.end();
   }
