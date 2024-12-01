@@ -9,6 +9,14 @@ async function query(queryObject) {
     port: process.env.POSTGRES_PORT,
   });
 
+  console.log("credenciais do banco de dados: ", {
+    host: process.env.POSTGRES_HOST,
+    user: process.env.POSTGRES_USER,
+    password: process.env.POSTGRES_PASSWORD,
+    database: process.env.POSTGRES_DB,
+    port: process.env.POSTGRES_PORT,
+  });
+
   try {
     await client.connect();
     const queryResult = await client.query(queryObject);
