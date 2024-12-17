@@ -15,6 +15,7 @@
     "lint:prettier:fix": "prettier --write .",
     "lint:eslint:check": "next lint --dir .",
     "test": "npm run services:up && concurrently -k --names next,jest --hide next -s command-jest \"next dev\" \"jest --runInBand --verbose\"",
+    "posttest": "npm run services:stop",
     "test:watch": "jest --runInBand --watchAll"
   },
   "author": "",
