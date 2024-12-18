@@ -9,7 +9,8 @@ export default function DatabaseData() {
   let databaseInformation = "Carregando...";
 
   if (!isLoading) {
-    const { version, max_connections, opened_connections } = data;
+    const { version, max_connections, opened_connections } =
+      data.dependencies.database;
 
     databaseInformation = (
       <>
