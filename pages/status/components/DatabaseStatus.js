@@ -1,5 +1,5 @@
 import useSWR from "swr";
-import fetchAPI from "../helpers/fetchApi";
+import fetchAPI from "helpers/fetchApi";
 
 export default function DatabaseData() {
   const { data, isLoading } = useSWR("/api/v1/status", fetchAPI, {
